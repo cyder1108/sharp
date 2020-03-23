@@ -64,7 +64,6 @@ class Sharp extends EventEmitter {
     if( _.isPlainObject(str) ) {
       let s = "";
       _.each(str, (val, key) => {
-        console.log( val )
         s+= `${key}${this.keyValSeparator}${val}${this.paramSeparator}`;
       });
       let regexp = new RegExp(`${this.paramSeparator}$`);
